@@ -1,0 +1,67 @@
+# Ignore target directory (build output)
+target/
+
+# Ignore logs and temp files
+*.log
+logs/
+*.tmp
+hs_err_pid*
+
+# Ignore compiled Java binaries
+*.class
+
+# Ignore Maven dependencies and wrapper
+.mvn/
+.m2/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/pom.xml.releaseBackup
+**/dependency-reduced-pom.xml
+
+# Ignore Gradle build directories
+.gradle/
+build/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Ignore Eclipse IDE files
+.project
+.classpath
+.settings/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore sensitive configuration files
+application.properties
+application.yml
+secrets.json
+
+# Ignore Lombok-generated files
+.lombok/
+
+# Ignore database files
+*.db
+*.sqlite
+
+# Ignore test coverage and reports
+coverage/
+jacoco/
+*.exec
+*.ec
