@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { DeliveryComponent } from './components/delivery/delivery.component';
+import { FinanceComponent } from './components/finance/finance.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // Redirect to Dashboard
-  // { path: 'dashboard', loadChildren: () => import('./core/dashboard/dashboard.module').then(m => m.DashboardModule) },
-  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'employees', loadChildren: () => import('./features/employee/employee.module').then(m => m.EmployeeModule) },
-  { path: 'finance', loadChildren: () => import('./features/finance/finance.module').then(m => m.FinanceModule) },
-  { path: 'inventory', loadChildren: () => import('./features/inventory/inventory.module').then(m => m.InventoryModule) },
-  { path: 'menu', loadChildren: () => import('./features/menu/menu.module').then(m => m.MenuModule) },
-  { path: 'billing', loadChildren: () => import('./features/billing-payment/billing-payment.module').then(m => m.BillingPaymentModule) },
-  { path: 'feedback', loadChildren: () => import('./features/feedback-order/feedback-order.module').then(m => m.FeedbackOrderModule) },
-  { path: '**', redirectTo: 'dashboard' } // Fallback route
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent, data: { breadcrumb: 'Dashboard' } },
+  { path: 'orders', component: OrdersComponent, data: { breadcrumb: 'Orders' } },
+  { path: 'menu', component: MenuComponent, data: { breadcrumb: 'Menu' } },
+  { path: 'inventory', component: InventoryComponent, data: { breadcrumb: 'Inventory' } },
+  { path: 'employees', component: EmployeesComponent, data: { breadcrumb: 'Employees' } },
+  { path: 'delivery', component: DeliveryComponent, data: { breadcrumb: 'Delivery' } },
+  { path: 'finance', component: FinanceComponent, data: { breadcrumb: 'Finance' } },
 ];
 
 @NgModule({
